@@ -9,5 +9,5 @@ import { Recipe } from '../../recipe.model';
 })
 export class RecipeItemComponent {
   @Input() recipe: Recipe;
-  @Output() recipeClicked: EventEmitter<any>;
+  @Output() recipeClicked = new EventEmitter<Recipe>();
 }

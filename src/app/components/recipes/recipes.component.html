@@ -1,8 +1,9 @@
 <div class="row">
   <div class="col-md-5">
-    <app-recipe-list></app-recipe-list>
+    <app-recipe-list (recipeEmmitted)="showRecipeDetail($event)"></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail *ngIf="recipeDetail" [recipe]="recipeDetail"></app-recipe-detail>
+    <h2 *ngIf="!recipeDetail">Select a recipe first!</h2>
   </div>
 </div>
